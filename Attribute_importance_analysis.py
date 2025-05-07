@@ -3,7 +3,7 @@ import numpy as np
 
 #Analiza istotnosci
 def estimate_information_gain_for_value(true_amount, false_amount):
-    if true_amount == 0:
+    if true_amount == 0 or false_amount == 0:
         print(f"Value Gain: 0")
         return 0
     sum = true_amount+false_amount
@@ -53,7 +53,7 @@ def estimate_information_gain_for_attribute(table):
 
 
 table = np.array([[3,0,2],
-                  [2,4,3]])
+                  [2,4,0]])
 
 
 estimate_information_gain_for_attribute(table)
